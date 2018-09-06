@@ -42,12 +42,21 @@ class ViewController: UIViewController {
         bookTemp.name = titleTextField.text!
         bookTemp.author = authorTextField.text!
         bookTemp.genre = authorTextField.text!
-        if(bookTemp.name == "" || bookTemp.author == "" || bookTemp.genre == "") {
+        if bookTemp.name == "" || bookTemp.author == "" || bookTemp.genre == "" {
             outputTextView.text = "Please fill contents"
         } else {
             myBookManager.registerBook(bookObject: bookTemp)
             outputTextView.text = "\(titleTextField.text!) has been registered."
             countLable.text = "\(myBookManager.countBooks())"
+        }
+    }
+    
+    @IBAction func searchAction(_ sender:Any) {
+        let resultBook = myBookManager.searchBook(name: titleTextField.text!)
+        if resultBook != nil {
+            outputTextView.text = resultBook
+        } else {
+            outputTextView.text = "search failed"
         }
     }
     
