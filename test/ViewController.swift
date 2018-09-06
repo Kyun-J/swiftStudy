@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     let myBookManager = BookManager()
     
     @IBOutlet weak var outputTextView : UITextView!
+    @IBOutlet weak var titleTextField : UITextField!
+    @IBOutlet weak var authorTextField : UITextField!
+    @IBOutlet weak var genreTextField : UITextField!
+    @IBOutlet weak var countLable : UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +28,8 @@ class ViewController: UIViewController {
         myBookManager.registerBook(bookObject: book1)
         myBookManager.registerBook(bookObject: book2)
         myBookManager.registerBook(bookObject: book3)
+        
+        countLable.text = "\(myBookManager.countBooks())"
     }
     
     @IBAction func showAllBookAction(_ sender: Any) {
@@ -32,7 +38,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func registerAction(_ sender : Any) {
-        
+        var bookTemp = Book()
+        bookTemp.name = titleTextField.text!
+        bookTemp.author = authorTextField.text!
+        bookTemp.genre = authorTextField.text!
+        if(bookTemp.name == "" || bookTemp.author == "" || bookTemp.genre == "") {
+            outputTextView.text = "Please fill contents"
+        } else {
+            myBookManager.registerBook(bookObject: bookTemp)
+            outputTextView.text = "\(titleTextField.text!) has been registered."
+            countLable.text = "\(myBookManager.countBooks())"
+        }
     }
     
     
