@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class first_book: UIViewController {
     
     let myBookManager = BookManager()
     
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     
     @IBAction func showAllBookAction(_ sender: Any) {
         print("showAllBookAction")
-        outputTextView.text = outputTextView.text + myBookManager.showAllBooks()
+        outputTextView.text = myBookManager.showAllBooks()
     }
     
     @IBAction func registerAction(_ sender : Any) {
@@ -57,6 +57,16 @@ class ViewController: UIViewController {
             outputTextView.text = resultBook
         } else {
             outputTextView.text = "search failed"
+        }
+    }
+    
+    @IBAction func removeAction(_ sender:Any) {
+        let result = myBookManager.removeBook(name: titleTextField.text!)!
+        if result {
+            outputTextView.text = "remove success"
+            countLable.text = "\(myBookManager.countBooks())"
+        } else {
+            outputTextView.text = "remove fail"
         }
     }
     
