@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29345E00214625D1002F57C6 /* DoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29345DFF214625D1002F57C6 /* DoneTextField.swift */; };
+		29345E0221462A95002F57C6 /* CustomUIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29345E0121462A95002F57C6 /* CustomUIBarButtonItem.swift */; };
 		29BA9A4321352D0C00CCC92C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BA9A4221352D0C00CCC92C /* AppDelegate.swift */; };
 		29BA9A4521352D0C00CCC92C /* first_book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BA9A4421352D0C00CCC92C /* first_book.swift */; };
 		29BA9A4821352D0C00CCC92C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29BA9A4621352D0C00CCC92C /* Main.storyboard */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29345DFF214625D1002F57C6 /* DoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTextField.swift; sourceTree = "<group>"; };
+		29345E0121462A95002F57C6 /* CustomUIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIBarButtonItem.swift; sourceTree = "<group>"; };
 		29BA9A3F21352D0C00CCC92C /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29BA9A4221352D0C00CCC92C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29BA9A4421352D0C00CCC92C /* first_book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = first_book.swift; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 		29C0F828214259C400427D39 /* third */ = {
 			isa = PBXGroup;
 			children = (
+				29345DFF214625D1002F57C6 /* DoneTextField.swift */,
+				29345E0121462A95002F57C6 /* CustomUIBarButtonItem.swift */,
 			);
 			path = third;
 			sourceTree = "<group>";
@@ -364,8 +370,10 @@
 				29C0F827214259B500427D39 /* third_signup.swift in Sources */,
 				29BA9A4321352D0C00CCC92C /* AppDelegate.swift in Sources */,
 				29C0F7E52142371100427D39 /* Book.swift in Sources */,
+				29345E00214625D1002F57C6 /* DoneTextField.swift in Sources */,
 				29C0F7E62142379600427D39 /* BookManager.swift in Sources */,
 				29BA9A712136274300CCC92C /* second_image.swift in Sources */,
+				29345E0221462A95002F57C6 /* CustomUIBarButtonItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
